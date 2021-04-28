@@ -1,0 +1,46 @@
+<view class="cu-modal drawer-modal justify-start {{modalName=='DrawerModal'?'show':''}}" bindtap="hideModal">
+  <view class="cu-dialog basis-lg" catchtap style="top:{{CustomBar}}px;height:calc(100vh - {{CustomBar}}px)">
+    <view class="cu-list menu text-left">
+      <view class="cu-item arrow" wx:for="{{items}}" wx:key bindtap="modalClick" data-target="{{item[1]}}" wx:key="{{item[1]}}">
+        <view class="content">
+          {{item[0]}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<text bindtap="showModal" class="cuIcon-list modal-button {{modalName=='DrawerModal'?'hidden':''}}"></text>
+<scroll-view scroll-y='true' class='scroll-view' scroll-into-view="{{scrollTo}}">
+  <view class="container">
+    <text class='title'>食在泰科</text>
+    <view class="content">
+      <para name="万秀园" id='a1'>
+        <text></text>
+        <text class='subtitle'>营业时间及楼层：</text>
+        <text>早餐(时间：<text class="hightlight">6:45-9:00</text>)，一、二层。</text>
+        <text>午餐(时间：<text class="hightlight">10:30-13:00</text>)，一、二、三。</text>
+        <text>晚餐(时间：<text class="hightlight">16:45-18:50</text>)，一、二、三。</text>
+        <text>夜宵(时间：<text class="hightlight">18:50-21:00</text>)，一层。</text>
+        <text>一层：中餐食堂，菜色范围广泛；粉面，炒面（饭），小炒，饮品。中、晚餐时有独家主食面点。</text>
+        <text>夜宵特色：麻辣烫，汤面，馄饨，煎包（荐！）</text>
+        <text>二层：平价楼层，蛋炒饭（荐！）</text>
+        <text>三层：炸鸡套餐、黄焖鸡米饭、抄手、重庆小面（荐！）</text>
+      </para>
+     
+      <para name="商业街" id='a2'>
+        <text></text>
+        <text></text>
+        <text></text>
+      </para>
+      <para name="水果店" id='a3'>
+        <text class='subtitle'>校内水果店</text>
+        <text>百果园，嘉果一品：出东门往北走，在十字路口的西边即可看见两家水果店隔街相对，价格便宜，办理会员有小幅优惠。</text>
+      </para>
+      <para name="咖啡厅" id='a4'>
+        <text>学校有一个安静文艺的咖啡厅～</text>
+        <text>山边咖啡：菜鸟驿站西侧。平时还有小哥哥小姐姐驻唱，很有气氛！</text>
+        <text>还有一家瑞幸咖啡，位于大物美一层，除售卖各类咖啡、奶茶、价格适中。</text>
+      </para>
+    </view>
+  </view>
+</scroll-view>

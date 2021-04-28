@@ -1,0 +1,41 @@
+<view class="cu-modal drawer-modal justify-start {{modalName=='DrawerModal'?'show':''}}" bindtap="hideModal">
+  <view class="cu-dialog basis-lg" catchtap style="top:{{CustomBar}}px;height:calc(100vh - {{CustomBar}}px)">
+    <view class="cu-list menu text-left">
+      <view class="cu-item arrow" wx:for="{{items}}" wx:key bindtap="modalClick" data-target="{{item[1]}}" wx:key="{{item[1]}}">
+        <view class="content">
+          {{item[0]}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<text bindtap="showModal" class="cuIcon-list modal-button {{modalName=='DrawerModal'?'hidden':''}}"></text>
+<scroll-view scroll-y='true' class='scroll-view' scroll-into-view="{{scrollTo}}">
+  <view class="container">
+    <text class='title'>住在泰科</text>
+    <view class="content">
+    <para name="宿舍基本设置" id='a1'>
+<text>宿舍主要规格为6人间，每个人的床位是上床下桌的。从硬件上来说，泰科的宿舍条件非常好，各种安全设备设施一应俱全。楼管相当负责尽职，但是在开学的时候可能会因为人员较杂，有时难免有疏忽，所以各位同学也要自行注意，不要为了贪小便宜而上当受骗。大家要提高警惕，财物不要乱放，外出锁好门窗，校园卡不能给陌生人，也不要放在电箱或其他地方!</text>
+<text class='subtitle'>Tips</text>
+<text>新生需要注意开学时推销的人很多，干万要小心。总之，上门来推销的东西尽量不要购买。还有开学初对那些自称是谁谁谁来宿舍收钱的人一定不可轻易相信，除了本班导员以及班主任，任何人没有资格收取任何资费。</text>
+</para>
+<para name="洗澡" id='a2'>
+<text>宿舍楼内每一间宿舍都有浴室，全天提供热水，刷卡洗澡，按照出水时间1角/分钟。<text class="hightlight">夏季在下午一点到晚上十一点提供热水，冬季下午三点开始提供热水，刷卡洗澡</text>，按照出水时间1角/分钟。不过平时热水可能会迟到早退。</text>
+</para>
+<para name="饮水" id='a3'>
+<text>宿舍楼一般每一层都有一个开水器，一分钟一角，也是刷校园卡。教学楼、图书馆、各个书院都有开水器，价格不变。但是宿舍的电功率是有限制的，不支持饮水机加热，会跳闸。想喝热水最好还是去开水房打 。</text>
+</para>
+<para name="用电" id='a4'>
+<text>宿舍晚上<text class="hightlight"> 23：00 </text>会熄灯断电(除空调外的所有插口都会断电)，关楼门(所以大家不要太晚回来，会麻烦楼管起床开门，楼管可能会把辅导员一起找下来)，第二天早上6点恢复供电。周五、周六、法定节假日、寒暑假期间晚间不断电。每个月每个宿舍有2度免费电，用完后要自己去学付宝上购买。</text>
+<text>另外需要注意的一-点:泰科的宿舍楼为了安全起见，对宿舍进行了限电处理，大功率(单体功率超过500W)的电器如电饭煲、电吹风等是不能使用的，一旦使用，电闸会自动跳起。如果断电的话，新式电表有限制，如果连续跳闸3次，电表将不能自动供电，需要在企业微信上申请恢复用电。如果需要吹头发可以到该楼层的水房使用，里面有公用的吹风机。</text>
+</para>
+<para name="门禁" id='a5'>
+<text>现在的宿舍楼都有门禁系统，要人脸识别才能进出。宿舍管理算蛮严的，。<text class="hightlight">早6点开门，23: 00关门</text>。原则上不可以夜不归宿。男女生不能相互串门。其中男生进女生宿舍是绝对不可能的，帮忙拿东西也不行。家长来看望也要登记的。学校会根据实际情况已经将宿舍分好，开学即可见，大部分是一个专业在一起，不过如果专业不能分整寝室的话，可能与其他专业混住。有些少数民族及预科班的也有分在同一寝室的情况。</text>
+</para>
+<para name="空调暖气" id='a6'>
+<text>空调:每间寝室的空调有一个遥控器，签署过协议之后，由宿舍长管理。大家使用空调时最好把窗户关上，节约用电。另外，空调夜间供电。</text>
+<text>暖气:暖气位于寝室内，无需手动开启或关闭，不过有一个手动阀门，可以调节暖气大小。</text>
+</para>
+    </view>
+  </view>
+</scroll-view>

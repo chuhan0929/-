@@ -1,0 +1,38 @@
+<view class="cu-modal drawer-modal justify-start {{modalName=='DrawerModal'?'show':''}}" bindtap="hideModal">
+  <view class="cu-dialog basis-lg" catchtap style="top:{{CustomBar}}px;height:calc(100vh - {{CustomBar}}px)">
+    <view class="cu-list menu text-left">
+      <view class="cu-item arrow" wx:for="{{items}}" wx:key bindtap="modalClick" data-target="{{item[1]}}" wx:key="{{item[1]}}">
+        <view class="content">
+          {{item[0]}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<text bindtap="showModal" class="cuIcon-list modal-button {{modalName=='DrawerModal'?'hidden':''}}"></text>
+<scroll-view scroll-y='true' class='scroll-view' scroll-into-view="{{scrollTo}}">
+  <view class="container">
+    <text class='title'>生活服务</text>
+    <view class="content">
+      <para name="洗衣裁剪" id="a1">
+        <text>1）洗衣机：各个书院内都有公用洗衣机（在每层楼的东/西侧开水房中），使用微信扫码付款，根据时长收费，约3元。洗衣机学校全部更新，较为干净。</text>
+      </para>
+      <para name="运动健身" id="a2">
+        <text class='subtitle'>体育场地</text>
+        <text>泰科的体育场地还是非常宽裕的。</text>
+        <text>篮球场、网球场、足球场除了体育课上课时间随时可以打，统统免费！</text>
+        <text class='subtitle'>健身房</text>
+        <text>1）五汶书院一层有健身房入口，价格免费，环境较好。</text>
+        <text class='subtitle'>运动会</text>
+        <text>在泰科每年的3至4月份点都是在操场，有最大规模的校运动会。</text>
+      </para>
+
+      <para name="校园卡业务" id="a3">
+      <text class="subtitle">办理地点</text>
+        <text>教学楼J1有校园卡人工充值点，在这里可以使用现金充值校园卡。此外，我们也可以使用自助圈存机（位于J1教学楼）从微信、支付宝转账充值校园卡，比从银行取钱再使用现金给校园卡充值要省事很多。</text>
+        <text class='subtitle'>学付宝充值流程：</text>
+        <text>进入学付宝，需要输入密码（注：此密码为校园卡密码，初始密码为身份证后六位），充值后一定一定要去食堂任意一个刷卡机圈存余额。</text>
+      </para>
+    </view>
+  </view>
+</scroll-view>

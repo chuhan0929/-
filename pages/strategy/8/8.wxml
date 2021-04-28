@@ -1,0 +1,64 @@
+<view class="cu-modal drawer-modal justify-start {{modalName=='DrawerModal'?'show':''}}" bindtap="hideModal">
+  <view class="cu-dialog basis-lg" catchtap style="top:{{CustomBar}}px;height:calc(100vh - {{CustomBar}}px)">
+    <view class="cu-list menu text-left">
+      <view class="cu-item arrow" wx:for="{{items}}" wx:key bindtap="modalClick" data-target="{{item[1]}}" wx:key="{{item[1]}}">
+        <view class="content">
+          {{item[0]}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<text bindtap="showModal" class="cuIcon-list modal-button {{modalName=='DrawerModal'?'hidden':''}}"></text>
+<scroll-view scroll-y='true' class='scroll-view' scroll-into-view="{{scrollTo}}">
+  <view class="container">
+    <text class='title'>我爱学习</text>
+    <view class="content">
+      <para name="课程形式变化" id='a1'>
+        <text>大学的课程采用走读形式，特点是速度快、信息量大、不过分深入细节，且需要逻辑思维能力。在课堂上老师会讲清思路，点明重难点。小泰科们要积极面对，及时探索出一套适合自己的学习方法。</text>
+        <text class='subtitle'>必修课程</text>
+        <text>大一新生一般只开设学科基础课，但公共必修课如思修、近代史也不容忽视。</text>
+        <text class='subtitle'>选修课程</text>
+        <text>>我校实行网络选课系统（除体育课为现场选课外），每个同学都要登陆本科教学网(http://58.56.217.181:8080/jwglxt)在规定时间选课，会在每学期末的上一学期进行预选，开学时进行退补选(大一上学期无法选择公共选修课，但可以挑选自己感兴趣的课程进行旁听)。</text>
+      </para>
+
+      <para name="自习与答疑" id='a2'>
+        <text class='subtitle'>自习地点</text>
+        <text>1）<text class="hightlight">教学楼</text>   时间：<text class="hightlight">7:00~21:30</text>，有暖气。</text>
+        <text>逸夫楼和教学楼一层有“无课教室”的电子显示屏，会及时更新没有课的教室（泰科校园公众号也可查看）。</text>
+        <text>到了期末考试周，学校会开放逸夫楼101、102作为通宵自习室。</text>
+        <text>2）图书馆  开馆时间：<text class="hightlight">8:00~22：00</text>（周六开馆时间为8:00~11:30和14:00~17:30。有空调，暖气。）</text>
+        <text>每到期末时图书馆都会爆满，图书馆将提前一小时开馆，因此需要同学早起排队。</text>
+        <text>3）各学院的院楼里也都各自设有自习室。个别楼栋（比如机电信息楼、经管楼）开放时间可至十点半。</text>
+        <text class='subtitle'>答疑地点与时间</text>
+        <text>一些科目会制定每周固定的答疑时间和地点，另外考试前，还会有集中答疑。</text>
+      </para>
+
+      <para name="考试" id='a3'>
+        <text class='subtitle'>考试形式</text>
+        <text>考试分为随堂考和集中考。专业课和部分必修课一般是随堂考，由任课老师选择时间地点。期末结课的公共必修课是集中在考试周考试，会在教务系统查询到考试科目和时间安排。</text>
+        <text class='subtitle'>考试成绩</text>
+        <text class='no-indent'>单科成绩</text>
+        <text>除了期末考试，平时成绩也会占总评的10%～50%，一般包括考勤、期中考试和作业三个部分。学校实行期中考试制度，凡是上16周的课程都必须有期中考试，难度普遍高于期末考试，其目的是提醒大家好好学习!</text>
+        <text class='no-indent'>加权成绩</text>
+        <text>科目总成绩采用加权的方式计算</text>
+        <text>加权计算公式：（Σ单科成绩*所占学分）/学分总和</text>
+        <text class='subtitle'>挂科与补考</text>
+        <text>补考时间一般设在开学报到之前一周到开学之后的一周，挂科的同学要及时了解补考时间，并按时到校参加补考。</text>
+        <text class='subtitle'>挂科的影响</text>
+        <text>补考即便通过了，也是会在成绩表上留下记录。如果补考未通过下学期或下学年要重修，此外补考和重修成绩不算入加权。挂科会让你失去很多的机会，比如转专业、奖学金等。</text>
+      </para>
+
+      <para name="奖学金评定" id='a4'>
+        <text>在泰科，奖学金的评定主要由智育成绩（主要指教务部门记载的必修课和限选课成绩）、完满教育成绩（主要指学生在社团活动、竞技体育、志愿服务、艺术实践四大模块的分数）、减分（主要指学生违反学校校纪校规以及其他相关规定的）。奖学金的金额从300到8000不等。</text>
+        <text>大一学年共有一次评定，大一下学期将根据大一整个学年的成绩评定国家奖学金，人民奖学金等。</text>
+      </para>
+
+      
+
+
+      
+
+    </view>
+  </view>
+</scroll-view>

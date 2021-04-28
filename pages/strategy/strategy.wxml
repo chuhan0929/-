@@ -1,0 +1,7 @@
+<image src="/images/strategy/bg.png" style="position: absolute; height: 100vh; width: 100vw; left: 0rpx; top: 0rpx"></image>
+<image src="/images/strategy/text1.jpg" style="position: absolute; height: 192rpx; width: 582rpx; display: block; box-sizing: border-box; left: 84rpx; top: 88rpx"></image>
+<view class="container">
+	<view wx:for="{{8}}" wx:key="*this" data-target="{{index+1}}" bindtap="goTo" style="width:300rpx;height:204rpx;">
+		<image class="animation-{{animation==index+1?'scale-up':''}}" src="/images/strategy/{{index+1}}.png" style="position: relative; left: 0rpx; top: 0rpx"></image>
+	</view>
+</view>

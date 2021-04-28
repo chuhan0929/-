@@ -1,0 +1,31 @@
+<view class="cu-modal drawer-modal justify-start {{modalName=='DrawerModal'?'show':''}}" bindtap="hideModal">
+  <view class="cu-dialog basis-lg" catchtap style="top:{{CustomBar}}px;height:calc(100vh - {{CustomBar}}px)">
+    <view class="cu-list menu text-left">
+      <view class="cu-item arrow" wx:for="{{items}}" wx:key bindtap="modalClick" data-target="{{item[1]}}" wx:key="{{item[1]}}">
+        <view class="content">
+          {{item[0]}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<text bindtap="showModal" class="cuIcon-list modal-button {{modalName=='DrawerModal'?'hidden':''}}"></text>
+<scroll-view scroll-y='true' class='scroll-view' scroll-into-view="{{scrollTo}}">
+  <view class="container">
+    <text class='title'>网络通讯</text>
+    <view class="content">
+    <para name="校园网" id='a1'>
+<text>原则上来说，进入大学即可携带电脑。特别是计算机相关专业的同学更需要购买电脑。但是如果条件有限没有办法购买电脑，学校教学楼机房也能提供电脑</text>
+<text>学校目前只支持电信网络，移动和联通电话卡进入学校基本处于无服务的状态。看到这里的话不要慌不要慌！！！！入学当天会有好多学长学姐邀请你办理校园卡！资费很实惠！</text>
+<text>同学在宿舍内可以上网，宿舍每个床位下都有1个上网口，可以去电信营业厅办理。</text>
+<text>校园网学生用户组收费标准：10元/月 带宽100M。</text>
+
+
+<text class='subtitle'>Tips</text>
+<text>上网宽带不支持多拨，多拨每30分钟会被强制下线。所以技术流同学就不要打赚宽带便宜的主意喽！</text>
+<text>学校内的电信营业厅一般关门很早，所以有办理业务需要的同学请在早点过去以免遇到电信营业厅小姐姐下班的情况。
+  打印店里由于人员复杂，病毒都会比较多，所以在这里插U盘会很容易染毒，建议用完后将U盘直接格式化。（有些打印店不能上网）</text></para>
+
+    </view>
+  </view>
+</scroll-view>

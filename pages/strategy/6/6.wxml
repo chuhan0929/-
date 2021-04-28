@@ -1,0 +1,43 @@
+<view class="cu-modal drawer-modal justify-start {{modalName=='DrawerModal'?'show':''}}" bindtap="hideModal">
+  <view class="cu-dialog basis-lg" catchtap style="top:{{CustomBar}}px;height:calc(100vh - {{CustomBar}}px)">
+    <view class="cu-list menu text-left">
+      <view class="cu-item arrow" wx:for="{{items}}" wx:key bindtap="modalClick" data-target="{{item[1]}}" wx:key="{{item[1]}}">
+        <view class="content">
+          {{item[0]}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<text bindtap="showModal" class="cuIcon-list modal-button {{modalName=='DrawerModal'?'hidden':''}}"></text>
+<scroll-view scroll-y='true' class='scroll-view' scroll-into-view="{{scrollTo}}">
+  <view class="container">
+    <text class='title'>交通出行</text>
+    <view class="content">
+      <para name="公交车站" id='a1'>
+        <image src='https://ae01.alicdn.com/kf/H1bcba0e590314cef8d28d6a128e243a1s.png' data-src='https://ae01.alicdn.com/kf/H1bcba0e590314cef8d28d6a128e243a1s.png' mode='widthFix' bindtap="imgpreview"></image>
+
+      </para>
+      <para name="乘车卡" id='a2'>
+        <text>入学后，可以直接在微信或者支付宝上办理乘车码.办理时请大家务必选择“泰安公交卡”</text>
+        <text>出北门坐K1路公交仅需2元可直达市内。</text>
+      </para>
+
+      <para name="共享汽车" id='a3'>
+        <text>附近停车点</text>
+        <text>1）泰安山口航天幼儿园内停车点</text>
+        <text class='subtitle'>可点击“校内导航"上方“服务”按钮可准确导航至停车点</text>
+      </para>
+
+      <para name="出租车" id='a4'>
+        <text>尽管泰安的交通出行方式十分发达，但是有时因为线路比较复杂，公交车不方便、等车、倒车也会很麻烦，有急事或者特殊情况时，也可以考虑打个车，尽管价格比较高，但是十分方便，而且服务质量很好。</text>
+        
+      </para>
+
+      <para name="机票、火车票" id='a5'>
+        <text>每到寒暑假，学生可以自己订学生票回家，但是只能订车票只能预定二等座（包括硬座）。现在开通了网上订票系统，所以大家也可以网络订票（www.12306.cn）。</text>
+      </para>
+
+    </view>
+  </view>
+</scroll-view>

@@ -1,0 +1,74 @@
+<view class="cu-modal drawer-modal justify-start {{modalName=='DrawerModal'?'show':''}}" bindtap="hideModal">
+  <view class="cu-dialog basis-lg" catchtap style="top:{{CustomBar}}px;height:calc(100vh - {{CustomBar}}px)">
+    <view class="cu-list menu text-left">
+      <view class="cu-item arrow" wx:for="{{items}}" wx:key bindtap="modalClick" data-target="{{item[1]}}" wx:key="{{item[1]}}">
+        <view class="content">
+          {{item[0]}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<text bindtap="showModal" class="cuIcon-list modal-button {{modalName=='DrawerModal'?'hidden':''}}"></text>
+<scroll-view scroll-y='true' class='scroll-view' scroll-into-view="{{scrollTo}}">
+  <view class="container">
+    <text class='title'>周边娱乐</text>
+    <view class="content">
+      <para name="美食" id='a1'>
+        <text></text>
+        <text></text>
+        <text></text>
+        <text></text>
+      </para>
+      <para name="购物" id='a2'>
+        <text>1）</text>
+        <text>2）</text>
+        <text>3）</text>
+        <text>4）</text>
+        <text>5）</text>
+        <text>6）<text style="display: inline;" selectable="true"></text></text>
+        <text class='subtitle'>Tips</text>
+        <text class="no-indent">关于各商城价位情况：</text>
+        <text></text>
+        <text></text>
+        <text></text>
+        <text></text>
+        <text></text>
+        <text></text>
+        <text></text>
+      </para>
+      <para name="KTV" id='a3'>
+        <text>1）</text>
+        <text>2）北</text>
+        <text>3）</text>
+        <text>4）</text>
+        <text>5）。</text>
+        <text>6）</text>
+      </para>
+      <para name="电影院" id='a4'>
+        <text>学生证电影票可以打折。此外许多团购网站(美团，糯米团等)会经常有比学生票还便宜的团购。</text>
+        <text>1）</text>
+        <text>2）</text>
+        <text>3）</text>
+        <text>4）</text>
+        <text>5）</text>
+        <text>6）</text>
+        <text>7）</text>
+        <text>8）</text>
+        <text>9）</text>
+        <text>10）</text>
+      </para>
+      <para name="观光景点" id='a5'>
+        <text>记得带学生证！</text>
+        <text>1）</text>
+        <text>2）</text>
+        <text></text>
+        <text>4）</text>
+        <text>5）</text>
+        <text>6）欢乐谷：最大的游乐场，生日当天凭身份证免门票。南门乘特9至工大桥换乘31路下行至厚俸桥南下车。</text>
+        <text>7）世界公园：很多世界著名建筑微缩版的聚集地，想了解世界建筑特点的同学可以去看看。南门乘特9或740路至看丹桥转477世界公园站下车。</text>
+
+      </para>
+    </view>
+  </view>
+</scroll-view>

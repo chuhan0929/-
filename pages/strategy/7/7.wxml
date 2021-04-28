@@ -1,0 +1,39 @@
+<view class="cu-modal drawer-modal justify-start {{modalName=='DrawerModal'?'show':''}}" bindtap="hideModal">
+  <view class="cu-dialog basis-lg" catchtap style="top:{{CustomBar}}px;height:calc(100vh - {{CustomBar}}px)">
+    <view class="cu-list menu text-left">
+      <view class="cu-item arrow" wx:for="{{items}}" wx:key bindtap="modalClick" data-target="{{item[1]}}" wx:key="{{item[1]}}">
+        <view class="content">
+          {{item[0]}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<text bindtap="showModal" class="cuIcon-list modal-button {{modalName=='DrawerModal'?'hidden':''}}"></text>
+<scroll-view scroll-y='true' class='scroll-view' scroll-into-view="{{scrollTo}}">
+  <view class="container">
+    <text class='title'>医疗报销</text>
+    <view class="content">
+    <para name="校医院工作时间" id='a1'>
+<text class="no-indent">1. 全年无休，24小时有医生接诊。</text>
+<text class="no-indent">2. 常规门诊时间：</text>
+<text><text class="hightlight">周一至周五 上午8：00——11：30</text></text>
+<text><text class="hightlight">下午14：00——17：30</text></text>
+<text class="no-indent">3. 延时门诊时间：</text>
+<text><text class="hightlight">周一至周五：17：30-20：00</text></text>
+<text class="no-indent">4. 双休日及法定节假日请到急诊值班室由值班医生负责接诊。</text>
+</para>
+<para name="关于药品" id='a2'>
+<text>校内医务室日常药品齐全。</text>
+<text>校外有漱玉民大药房、爱芝民大药房等正规场所购买药品，漱玉民大药房位于山口镇中心大街（距离学校最近的药房）  </text>
+</para>
+<para name="校外医疗" id='a3'>
+  <text class='subtitle'>解放军第九六零医院</text>
+  <text>位于：泰山区环山路217号。泰安市中心医院:</text>
+  <text class='subtitle'>泰安市中心医院（支持异地医保） </text>
+<text style="width: 560rpx; height: 37rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx">位于：泰山区康复路6号  </text>
+</para>
+
+    </view>
+  </view>
+</scroll-view>
